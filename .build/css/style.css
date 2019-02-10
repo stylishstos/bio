@@ -38,7 +38,11 @@
             box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif
+    color: #1e1c1d;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
 }
 
 .text, .text h1, .text h2, .text h3, .text h4  {
@@ -95,6 +99,10 @@
     border-bottom: 2px solid #fff;
 }
 
+.header a .price {
+            color: #fff;
+}
+
 .header a:after {
     content: '';
     display: block;
@@ -133,6 +141,7 @@ section .banner {
         height: 500px;
         width: 100%;
         margin-bottom: 15px;
+        background-repeat: no-repeat;
     }
 
 section .banner .text {
@@ -172,8 +181,17 @@ section.sales-section .items .item a .price {
 section.service-section ul { margin-left: 25px;
 }
 
-section.service-section .banner { background: url("../img/service/service-big.jpg");
-}
+section.service-section .service-block .banner {
+            background: url("../img/service/service-big.jpg");
+          }
+
+section.service-section .sanitation-block .banner {
+            background: url("../img/service/sanitation-big.jpg");
+          }
+
+section.service-section .sanitation-block .text {
+            top: 35%;
+          }
 
 section.rent-section .banner {
             background: url("../img/service/rent-big.jpg");

@@ -6,7 +6,11 @@ $text_green : #83a938;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif
+    color: #1e1c1d;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
 }
 
 .text, .text h1, .text h2, .text h3, .text h4  {
@@ -52,6 +56,10 @@ $text_green : #83a938;
                 border-bottom: 2px solid #fff;
             }
         }
+
+        .price {
+            color: #fff;
+        }
     }
 
     a{
@@ -93,6 +101,7 @@ section {
         height: 500px;
         width: 100%;
         margin-bottom: 15px;
+        background-repeat: no-repeat;
 
         .text {
             position: absolute;
@@ -135,8 +144,20 @@ section {
 
     &.service-section {
         ul { margin-left: 25px; }
+        .service-block {
+          .banner {
+            background: url("../img/service/service-big.jpg");
+          }
+        }
+        .sanitation-block {
+          .banner {
+            background: url("../img/service/sanitation-big.jpg");
+          }
 
-        .banner { background: url("../img/service/service-big.jpg"); }
+          .text {
+            top: 35%;
+          }
+        }
     }
 
     &.rent-section {
