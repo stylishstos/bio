@@ -1,0 +1,152 @@
+@import './inc/fonts';
+
+$text_green : #83a938;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif
+}
+
+.text, .text h1, .text h2, .text h3, .text h4  {
+    color: #fff;
+    text-shadow: 1px 2px 1px #0000008f;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header {
+    height: 573px;
+    position: relative;
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-size: contain;
+
+        &.sales { background: url("../img/header/sales.jpg") no-repeat; }
+        &.rent { background: url("../img/header/rent.jpg") no-repeat; }
+        &.service { background: url("../img/header/service.jpg") no-repeat; }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            top: 45%;
+            left: 10%;
+            text-align: center;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .text {
+            display: block;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 25%;
+                margin: 15px auto 5px;
+                border-bottom: 2px solid #fff;
+            }
+        }
+    }
+
+    a{
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.5;
+          transition: 0.3s;
+        }
+
+        &:hover:after {
+            opacity: 1;
+            background: rgba(12, 12, 12, 0.5);
+        }
+    }
+}
+
+section {
+    padding: 30px 0;
+
+    h1, h2, h3, h4 {
+        color: $text_green;
+        font-weight: 600;
+    }
+
+    .notify {
+        border: 1px solid #a8ca28;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .banner {
+        position: relative;
+        height: 500px;
+        width: 100%;
+        margin-bottom: 15px;
+
+        .text {
+            position: absolute;
+            text-align: center;
+            top: 45%;
+            left: 40%;
+        }
+    }
+
+    &.sales-section {
+        .items {
+            padding: 15px 0;
+
+            .item {
+                a {
+                    display: block;
+                    margin-bottom: 50px;
+                    text-decoration: none;
+                    text-align: center;
+                    font-weight: 600;
+
+                    img.shower {
+                        margin-top: -50px;
+                    }
+
+                    h3 {
+                        font-weight: 600;
+                        color: $text_green;
+                    }
+
+                    .price {
+                        display: block;
+                        font-size: 24px;
+                        color: #6c513e;
+                    }
+                }
+            }
+        }
+    }
+
+    &.service-section {
+        ul { margin-left: 25px; }
+
+        .banner { background: url("../img/service/service-big.jpg"); }
+    }
+
+    &.rent-section {
+        .banner {
+            background: url("../img/service/rent-big.jpg");
+            .text {
+                top: 35%;
+                left: 42%;
+            }
+
+        }
+    }
+}

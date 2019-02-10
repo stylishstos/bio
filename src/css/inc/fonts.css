@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Exo2-LightItalic";
+    src: url("http://localhost:3000/css/font/Exo2-LightItalic.otf");
+}
+
+@font-face {
+    font-family: "Exo2-BlackItalic";
+    src: url("http://localhost:3000/css/font/Exo2-BlackItalic.otf");
+}
+
+@font-face {
+    font-family: "Exo2-Bold";
+    src: url("http://localhost:3000/css/font/Exo2-Bold.otf");
+}
+
+@font-face {
+    font-family: "Exo2-BoldItalic";
+    src: url("http://localhost:3000/css/font/Exo2-BoldItalic.otf");
+}
+
+@font-face {
+    font-family: "Exo2-SemiBold";
+    src: url("http://localhost:3000/css/font/Exo2-SemiBold.otf");
+}
+
+@font-face {
+    font-family: "Exo2-LIght";
+    src: url("http://localhost:3000/css/font/Exo2-Light.otf");
+}
+
+@font-face {
+    font-family: "Exo2-SemiBoldItalic";
+    src: url("http://localhost:3000/css/font/Exo2-SemiBoldItalic.otf");
+}
