@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     server = require('browser-sync'),
     postcss = require('gulp-postcss'),
+    postcssCustomMedia = require('postcss-custom-media'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('autoprefixer'),
     precss = require('precss'),
@@ -22,7 +23,28 @@ gulp.task('js', function(callback){
 
 gulp.task('css', function () {
     var plugins = [
-        autoprefixer({browsers: ['last 2 version']}),
+        autoprefixer({browsers: [
+                'last 2 versions',
+                'ie >= 10',
+                'android >= 4',
+                'ios >= 8'
+            ]}),
+        postcssCustomMedia({
+            importFrom:[{
+                customMedia: {
+                    "--small": "screen",
+                    "--small-only": "screen and (max-width: 47.9375em)",
+                    "--medium": "screen and (min-width: 48em)",
+                    "--medium-only": "screen and (min-width: 48em) and (max-width: 64em)",
+                    "--large": "screen and (min-width: 64.0625em)",
+                    "--large-only": "screen and (min-width: 64.0625em) and (max-width: 90em)",
+                    "--xlarge": "screen and (min-width: 90.0625em)",
+                    "--xlarge-only": "screen and (min-width: 90.0625em) and (max-width: 120em)",
+                    "--xxlarge": "screen and (min-width: 120.0625em)",
+                    "--xxlarge-only": "screen and (min-width: 120.0625em) and (max-width: 99999999em)"
+                }
+            }]
+        }),
         // cssnano(),
         precss()
     ];
