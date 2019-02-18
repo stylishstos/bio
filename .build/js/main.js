@@ -74,14 +74,29 @@ var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _items = __webpack_require__(2);
+var _nav = __webpack_require__(2);
+
+var _nav2 = _interopRequireDefault(_nav);
+
+var _items = __webpack_require__(3);
 
 var _items2 = _interopRequireDefault(_items);
+
+var _mailToUs = __webpack_require__(4);
+
+var _mailToUs2 = _interopRequireDefault(_mailToUs);
+
+var _callMe = __webpack_require__(5);
+
+var _callMe2 = _interopRequireDefault(_callMe);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function init() {
+    (0, _nav2.default)(_jquery2.default);
     (0, _items2.default)(_jquery2.default);
+    (0, _mailToUs2.default)(_jquery2.default);
+    (0, _callMe2.default)(_jquery2.default);
 }
 
 (0, _jquery2.default)(document).ready(init);
@@ -10467,19 +10482,127 @@ return jQuery;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+exports.default = function ($) {
+    var nav = $('.nav-link');
+
+    nav.each(function () {
+        var a = $(this);
+        var scrollTop = $(a.attr('href')).offset().top;
+
+        var scroll = function scroll() {
+            $('html, body').animate({ scrollTop: scrollTop }, 500, 'linear');
+        };
+
+        a.bind('click', scroll);
+    });
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 exports.default = items;
 function items($) {
-    var items = $('.items');
+    var items = $('.items .item');
 
-    console.log(items);
+    items.each(function () {
+        var item = $(this);
+        var close = item.find('.icon-close');
+        var description = item.find('.description');
 
-    items.delegate('.item', 'click', function (e) {
-        console.log(e);
-        e.preventDefault();
+        item.bind('click', function (e) {
+            e.preventDefault();
+            description.addClass('visible');
+        });
 
-        $(this).find('.description').addClass('visible');
+        close.bind('click', function (e) {
+            e.stopPropagation();
+
+            description.removeClass('visible');
+        });
     });
 }
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function ($) {
+    var mailToUsBtns = $('[data-call="mail-to-us"]');
+    var mailToUs = $('.mail-to-us');
+    var close = mailToUs.find('.close-btn');
+
+    close.bind('click', function () {
+        mailToUs.removeClass('visible');
+    });
+
+    mailToUsBtns.each(function () {
+        var button = $(this);
+
+        button.bind('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            mailToUs.addClass('visible');
+        });
+    });
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function ($) {
+    var body = $('body');
+
+    var container = $('<div/>', {
+        'class': 'call-me-please'
+    });
+
+    var bg = $('<div/>', {
+        'class': 'call-me-please__bg'
+    }).appendTo(container);
+
+    var phone = $('<div/>', {
+        'class': 'call-me-please__phone'
+    }).appendTo(container);
+
+    var form = $('<div class="call-me-please__form"><div class="caret"></div><input type="text" placeholder="+7 введите номер"><button>жду звонка</button></div>');
+
+    var input = form.find("input");
+
+    form.find("button").bind("click", function () {
+        alert(input.val());
+    });
+
+    form.appendTo(container);
+
+    body.append(container);
+};
+
+var m = ["ага, сейчас твой телефон по ip вычислю и перезвоню", "та ты шо такой настырный, обожди штрих", "отьебись дядя, сервис еще не готов.", "хули ты тыкаешь заебал"];
+var length = m.length;
 
 /***/ })
 /******/ ]);

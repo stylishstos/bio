@@ -8,52 +8,72 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-        <div class="container-fluid">
+        <div id="top" class="container-fluid p-0">
+            <nav>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a href="#top" class="logo nav-link">
+                                <img src="./img/logo.png" class="py-1 img-fluid" alt="">
+                            </a>
+                            <!-- /.logo -->
+                        </div>
+                        <!-- /.col-md-1 -->
+                        <div class="col-md-10 row align-items-center justify-content-end">
+                            <a href="#sales" class="link nav-link col text-center flex-grow-0">продажи</a>
+                            <!-- /.link -->
+                            <a href="#rent" class="link nav-link col text-center flex-grow-0">аренда</a>
+                            <!-- /.link -->
+                            <a href="#service" class="link nav-link col text-center flex-grow-0">обслуживание</a>
+                            <!-- /.link -->
+                            <a href="#sanitation-block" class="link nav-link col text-center flex-grow-0">откачка отходов</a>
+                            <!-- /.link -->
+                        </div>
+                        <!-- /.col-md-11 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.nav -->
             <header class="header">
                 <div class="container">
                     <div class="row no-gutters">
-                        <div class="col-md-4">
-                                <a class="sales" href="#sales">
-                                    <div class="overlay">
+                        <a class="col-md-4 sales nav-link" href="#sales">
+                            <div class="overlay">
                                         <span class="text">
                                             <h2>Продажа</h2>
                                             туалетных кабин
                                         </span>
-                                        <span class="price">
+                                <span class="price">
                                             <h4>от 13000 ₽</h4>
                                         </span>
-                                    </div>
-                                </a>  
                             </div>
-                            <div class="col-md-4">
-                                <a class="rent" href="#rent">
-                                    <div class="overlay">
+                        </a>
+                        <a class="col-md-4 rent nav-link" href="#rent">
+                            <div class="overlay">
                                         <span class="text">
                                             <h2>Аренда</h2>
                                             туалетных кабин
                                         </span>
-                                        <span class="price">
+                                <span class="price">
                                             <h4>от 13000 ₽</h4>
                                         </span>
-                                    </div>
-                                </a>  
                             </div>
-                            <div class="col-md-4">
-                                <a class="service" href="#service">
-                                    <div class="overlay">
+                        </a>
+                        <a class="col-md-4 service nav-link" href="#service">
+                            <div class="overlay">
                                         <span class="text">
                                             <h2>Обслуживание</h2>
                                             туалетных кабин
                                         </span>
-                                        <span class="price">
+                                <span class="price">
                                             <h4>от 13000 ₽</h4>
                                         </span>
-                                    </div>
-                                </a>
                             </div>
+                        </a>
                     </div>
                 </div>
-
             </header>
             <div class="container">
                 <section id="sales" class="sales-section">
@@ -88,69 +108,80 @@
                                <!-- /.price -->
                            </a>
                            <div class="description">
-                               <div class="row">
-                                   <div class="col-md-9">
-                                       <img class="img-fluid" src="./img/sales/econom-big.jpg" alt="">
-                                   </div>
-                                   <!-- /.col -->
-                                   <div class="col-md-3">
-                                       <div class="cost-block">
-                                           <h3>МТК "Эконом"</h3>
-                                           <div>
-                                                <span>цена</span>
-                                                <h3 class="cost">от 13 000 ₽</h3>
-                                                <button class="btn">Заказать</button>
-                                                <p class="special-offer">
-                                                    Специальные ценовые предложения для диллеров.
-                                                </p>
-                                                <!-- /.special-offer -->
-                                           </div>
+                               <div class="container">
+                                   <div class="row">
+                                       <div class="col-2 offset-10 p-3 text-right">
+                                           <span class="icon icon_size_m icon-close"></span>
+                                           <!-- /.icon icon-close -->
                                        </div>
-                                       <!-- /.price -->
+                                       <!-- /.col align-self-end -->
                                    </div>
-                                   <!-- /.col -->
-                               </div>
-                               <!-- /.row -->
-                               <div class="row mt-5 info">
-                                   <div class="col-md-4">
-                                       <h4 class="caption">Основные характеристики</h4>
-                                       <p>Габариты (Д х Ш х В) - 110х120х225 см</p>
-                                       <p>Вес (кг) - 67</p>
-                                       <p>Кол-во посещений - 500</p>
-                                       <p>Объем бака (л) - 250</p>
-                                       <p>Производитель - Россия</p>
-                                       <p>Гарантия 5 лет</p>
+                                   <!-- /.row -->
+                                   <div class="row">
+                                       <div class="col-md-9">
+                                           <img class="img-fluid" src="./img/sales/econom-big.jpg" alt="">
+                                       </div>
+                                       <!-- /.col -->
+                                       <div class="col-md-3">
+                                           <div class="cost-block">
+                                               <h3>МТК "Эконом"</h3>
+                                               <div>
+                                                   <span>цена</span>
+                                                   <h3 class="cost">от 13 000 ₽</h3>
+                                                   <button class="btn" data-call="mail-to-us">Заказать</button>
+                                                   <p class="special-offer">
+                                                       Специальные ценовые предложения для диллеров.
+                                                   </p>
+                                                   <!-- /.special-offer -->
+                                               </div>
+                                           </div>
+                                           <!-- /.price -->
+                                       </div>
+                                       <!-- /.col -->
                                    </div>
-                                   <!-- /.col-md-4 -->
-                                   <div class="col-md-4">
-                                       <h4 class="caption">Стандартная комплектация</h4>
-                                       <p>- накопительный бак</p>
-                                       <p>- сиденье с крышкой</p>
-                                       <p>- запирающее устройство</p>
-                                       <p>- вентиляционная труба</p>
-                                       <p>- универсальные ушки для навесного замка</p>
-                                       <p>- держатель для туалетной бумаги</p>
+                                   <!-- /.row -->
+                                   <div class="row info">
+                                       <div class="col-md-4">
+                                           <h4 class="caption">Основные характеристики</h4>
+                                           <p>Габариты (Д х Ш х В) - 110х120х225 см</p>
+                                           <p>Вес (кг) - 67</p>
+                                           <p>Кол-во посещений - 500</p>
+                                           <p>Объем бака (л) - 250</p>
+                                           <p>Производитель - Россия</p>
+                                           <p>Гарантия 5 лет</p>
+                                       </div>
+                                       <!-- /.col-md-4 -->
+                                       <div class="col-md-4">
+                                           <h4 class="caption">Стандартная комплектация</h4>
+                                           <p>- накопительный бак</p>
+                                           <p>- сиденье с крышкой</p>
+                                           <p>- запирающее устройство</p>
+                                           <p>- вентиляционная труба</p>
+                                           <p>- универсальные ушки для навесного замка</p>
+                                           <p>- держатель для туалетной бумаги</p>
+                                       </div>
+                                       <!-- /.col-md-4 -->
+                                       <div class="col-md-4">
+                                           <h4 class="caption">Особенности туалетной кабины</h4>
+                                           <p>
+                                               Туалетная кабина предназначена преимущественно для индивидуального пользования - дача,
+                                               частный дом, либо пользования небольшого количества людей.
+                                           </p>
+                                       </div>
+                                       <!-- /.col-md-4 -->
                                    </div>
-                                   <!-- /.col-md-4 -->
-                                   <div class="col-md-4">
-                                       <h4 class="caption">Особенности туалетной кабины</h4>
-                                       <p>
-                                           Туалетная кабина предназначена преимущественно для индивидуального пользования - дача,
-                                           частный дом, либо пользования небольшого количества людей.
+                                   <!-- /.row -->
+                                   <div class="row mt-5">
+                                       <p class="notify">
+                                           Мобильные туалетные кабины продаются в собранном и разобранном виде.
+                                           Доставка при покупке более 5 туалетных кабин по Москве бесплатно.
+                                           В наличии имеются кабины в двух цветовых вариантах: синий и зеленый.
                                        </p>
+                                       <!-- /.notify -->
                                    </div>
-                                   <!-- /.col-md-4 -->
+                                   <!-- /.row -->
                                </div>
-                               <!-- /.row -->
-                               <div class="row mt-5">
-                                   <p class="notify">
-                                       Мобильные туалетные кабины продаются в собранном и разобранном виде.
-                                       Доставка при покупке более 5 туалетных кабин по Москве бесплатно.
-                                       В наличии имеются кабины в двух цветовых вариантах: синий и зеленый.
-                                   </p>
-                                   <!-- /.notify -->
-                               </div>
-                               <!-- /.row -->
+                               <!-- /.container -->
                            </div>
                            <!-- /.description -->
                        </div>
@@ -204,7 +235,7 @@
                    <!-- /.row --> 
                 </section>
                 <!-- /.sales-section -->
-                <section id="rent" class="rent-section">
+                <section id="rent" class="rent-section p-0">
                     <section class="long-rent">
                         <div class="banner">
                         <span class="text">
@@ -434,7 +465,7 @@
                         </p>
                     </section>
                     <!-- /.service-block -->
-                    <section class="sanitation-block">
+                    <section id="sanitation-block" class="sanitation-block">
                         <div class="banner">
                             <span class="text">
                                 <h1>Откачка отходов</h1>
@@ -464,6 +495,25 @@
 
             </footer>
         </div>
+        <div class="mail-to-us container-fluid">
+            <div class="row justify-content-center align-content-center">
+                <div class="col-md-3 p-5 form">
+                    <div class="text-right mb-3"><span class="icon icon_size_m icon-close_white close-btn"></span>
+                    <!-- /.icon icon_size_m icon-close --></div>
+                    <!-- /.text-right -->
+                    <input type="text" class="field" placeholder="имя" />
+                    <!-- /.field -->
+                    <input type="text" class="field" placeholder="фамилия" />
+                    <!-- /.field -->
+                    <input type="text" class="field" placeholder="телефон" />
+                    <!-- /.field -->
+                    <button class="btn">отправить</button>
+                </div>
+                <!-- /.col-md-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.mail-to-us -->
         <script type='text/javascript' src='./js/main.js'></script>
     </body>
 </html>

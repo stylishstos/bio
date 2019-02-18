@@ -1,12 +1,20 @@
 export default function items($) {
-    const items = $('.items');
+    const items = $('.items .item');
 
-    console.log(items);
+    items.each(function () {
+       const item = $(this);
+       const close = item.find('.icon-close');
+       const description = item.find('.description');
 
-    items.delegate('.item', 'click', function (e) {
-        console.log(e);
-        e.preventDefault();
+       item.bind('click', function (e) {
+           e.preventDefault();
+           description.addClass('visible');
+       });
 
-        $(this).find('.description').addClass('visible');
+       close.bind('click', function (e) {
+           e.stopPropagation();
+
+           description.removeClass('visible');
+       })
     });
 }

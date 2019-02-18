@@ -1,0 +1,171 @@
+.call-me-please {
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  z-index: 9000000;
+  left: 90%;
+  bottom: 10%;
+}
+
+.call-me-please__bg {
+  background: radial-gradient(ellipse at center,#0aabff 0,#59c6ff 100%);
+  border-radius: 100px;
+  width: 76px;
+  height: 76px;
+  opacity: .92;
+  position: absolute;
+  cursor: pointer;
+}
+
+@-webkit-keyframes call_me_please_phone {
+  47% {
+    transform:rotate(0deg)
+  }
+  50% {
+    transform:rotate(15deg)
+  }
+  53% {
+    transform:rotate(0deg)
+  }
+  54% {
+    transform:rotate(15deg)
+  }
+  57% {
+    transform:rotate(0deg)
+  }
+  60% {
+    transform:rotate(15deg)
+  }
+  63% {
+    transform:rotate(0deg)
+  }
+  66% {
+    transform:rotate(15deg)
+  }
+  69% {
+    transform:rotate(0deg)
+  }
+  72% {
+    transform:rotate(15deg)
+  }
+  75% {
+    transform:rotate(0deg)
+  }
+}
+
+@keyframes call_me_please_phone {
+  47% {
+    transform:rotate(0deg)
+  }
+  50% {
+    transform:rotate(15deg)
+  }
+  53% {
+    transform:rotate(0deg)
+  }
+  54% {
+    transform:rotate(15deg)
+  }
+  57% {
+    transform:rotate(0deg)
+  }
+  60% {
+    transform:rotate(15deg)
+  }
+  63% {
+    transform:rotate(0deg)
+  }
+  66% {
+    transform:rotate(15deg)
+  }
+  69% {
+    transform:rotate(0deg)
+  }
+  72% {
+    transform:rotate(15deg)
+  }
+  75% {
+    transform:rotate(0deg)
+  }
+}
+
+.call-me-please__phone {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAuCAYAAABap1twAAAACXBIWXMAAC4jAAAuIwF4pT92AAABNmlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjarY6xSsNQFEDPi6LiUCsEcXB4kygotupgxqQtRRCs1SHJ1qShSmkSXl7VfoSjWwcXd7/AyVFwUPwC/0Bx6uAQIYODCJ7p3MPlcsGo2HWnYZRhEGvVbjrS9Xw5+8QMUwDQCbPUbrUOAOIkjvjB5ysC4HnTrjsN/sZ8mCoNTIDtbpSFICpA/0KnGsQYMIN+qkHcAaY6addAPAClXu4vQCnI/Q0oKdfzQXwAZs/1fDDmADPIfQUwdXSpAWpJOlJnvVMtq5ZlSbubBJE8HmU6GmRyPw4TlSaqo6MukP8HwGK+2G46cq1qWXvr/DOu58vc3o8QgFh6LFpBOFTn3yqMnd/n4sZ4GQ5vYXpStN0ruNmAheuirVahvAX34y/Axk/96FpPYgAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAADgklEQVR42sSZTWhcVRiG35kmaZI2TRNDd3Flf2xV/KEu/KGGQOuif2ZRC0VEKi6qoEh/EA0iLRGEbgRBBFuQJl1Y3NiW0JS2btooaUiqqQ3ZtFpa0Ig1kZTY0MfNO3gdZu7cuTP3zoHDuTl533Pee79zvu87ZzKAipQuSTslrZf0u6R+SV8p7QLk107gPP+V+4HnYaC9ACexmt+xOSDmM2Ct+5cAH7j/V2BpLQS+YgGzwHNFCDuMGUlb4GpPPA2sKEE6EPjCqQmc8qQPRiSeNL4nDYEbPFlfGcQ6L4V5YHHSAgcscHmZ5BfN+zRJgRlgWlJG0gMxvNSEpLWSmiXdTcINZi1sNCb/kNsXkvLTWbd/xeQ/4nYmyUgCcDHG+sj5ze+T3iQ3gJkyifssbgpYlrTAY54saow9aPwPQFMafrDHE74agdBt7IW0Ql0GaJI05538VES3Ui9pIY1sK2v/dVbSk5I6QrDNFjeYlrigm+l1uz8E2+n2Yq0S1tvAQsh6aPf6O1GrhHWnBbwdQhgzpq1WGfU0cA/IFCE8YYGDtRKYy5gPhpBy2c+mtNxM/rKclLRKUrukPwss2wZJs5LuS2pJekdnC/S97La/COcfSdslNUo6UYtjp4DjEcx41JjX0jaxHCnm7MRbJRU73f9i//iwpGtpmViS7tnULZIGQvjdbkf8IqmZOFe/sRlfCsFsNeanEPdUNTeTXxcBf1tARwhuT8wsp6VSgQKe8eSjJXAfGXcqwpg9wM/GzwN7KxEo4EMP9nkJ3MfGnS7y/xUBDwHQH7g0GAIa4goU8K0HercE7hPjbgJvAE8DzwK9AWFHgNYAp8/9lysRKGDcA20rgXuTwuWWD/yFOO8U+vrlCmx1QgHwfIQNsAV4zxdOXRHGP+yxD8cVKOChwBdZn0D0OOOxN4dFklLlMUnjfl4n6WoVXXOdk5E6ScuzMQe5EogiExEOW+WUBUk7LPBApebYEDB3V5VNfQuYyVb4tt9JetzP5yTtquKXHJbUUq23XQlc95c8VKUxfwP+qKZJGgM7cCjCXXeUe/C3kkgy+wLrclcM/uvmjsX1g1HqRuCOJzrjhKMUpwH4wpzJ3NE2yRNZk++vc+USsNu/ZC0KXMavAd53VgPwNVBfSSQptz4KfFkgLt/N+3um0PkmbiSJU9rs3Lt9hlniiPGjpNOShnyU/V/5dwD/oWhC4OYMWQAAAABJRU5ErkJggg==');
+  width: 76px;
+  height: 76px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+  animation: call_me_please_phone 5s infinite;
+}
+
+@keyframes przv_future_fadeInBtnTooltip {
+  from {
+    opacity:0;
+    -webkit-transform:translate3d(30px,0,0);
+    transform:translate3d(30px,0,0);
+  }
+  to {
+    opacity:1;
+    -webkit-transform:none;
+    transform:none;
+  }
+}
+
+.call-me-please__form {
+  display: none;
+  position: absolute;
+  padding: 15px;
+  width: 228px;
+  left: -235px;
+  top:-15px;
+  -webkit-border-radius:15px !important;
+  -moz-border-radius:15px !important;
+  border-radius:15px !important;
+  position:relative !important;
+  -webkit-animation-name:przv_future_fadeInBtnTooltip;
+  animation-name:przv_future_fadeInBtnTooltip;
+  -webkit-animation-duration:.4s;
+  animation-duration:.4s;
+  transition:all .4s ease-in-out !important;
+  transition-delay:.4s;
+  webkit-box-shadow:-1px 2px 0 0 rgba(1,1,1,.2);
+  -moz-box-shadow:-1px 2px 0 0 rgba(1,1,1,.2);
+  box-shadow:-1px 1px 2px 0 rgba(1,1,1,.2);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.call-me-please__form:hover, .call-me-please__form:focus {
+  display: block;
+}
+
+.call-me-please__form .caret {
+  position: absolute !important;
+  height: 108px !important;
+  width: 7px !important;
+  right: -7px !important;
+}
+
+.call-me-please__form input {
+  width: 100%;
+  margin: 5px;
+}
+
+.call-me-please__form button {
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 20px;
+  font-weight: 700;
+  background: #3b9ad7;
+  display: block;
+  width: 100%;
+  margin: 5px;
+}
+
+.call-me-please:hover .call-me-please__form {
+  display: block;
+}
