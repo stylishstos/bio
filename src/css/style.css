@@ -1,10 +1,8 @@
 @import './inc/fonts';
 @import './inc/call-me';
 
-$text_green : #83a938;
-$btn_green: #83a938;
-$text_brown: #6c513e;
-$btn_brown: #6c513e;
+$green : #83a938;
+$brown: #6c513e;
 
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -38,16 +36,20 @@ $btn_brown: #6c513e;
     padding: 10px 15px;
     border-radius: 4px;
     color: #fff;
-    background-color: $btn_green;
+    background-color: $green;
 
     &:hover {
         color: #fff;
-        background-color: $btn_brown;
+        background-color: $brown;
     }
 }
 
+/* header, footer, section padding-top for nav*/
+.header, footer, section {
+  padding-top: 5rem;
+}
+
 .header {
-    padding-top: 4rem;
     height: 573px;
     position: relative;
 
@@ -63,26 +65,27 @@ $btn_brown: #6c513e;
         display: flex;
         cursor: pointer;
         text-decoration: none;
+        background-color: rgba(0, 0, 0, .5);
         background-size: cover;
         background-repeat: no-repeat;
 
 
         &.sales {
-            background-image: url("../img/header/sales.jpg");
+            background-image: url("../img/header/sales-header.png");
             @media(--small-only) {
                 background-position-y: 30%;
             }
         }
 
         &.rent {
-            background-image: url("../img/header/rent.jpg");
+            background-image: url("../img/header/rent-header.png");
             @media(--small-only) {
                 background-position-y: 40%;
             }
         }
 
         &.service {
-            background-image: url("../img/header/service.jpg");
+            background-image: url("../img/header/service-header.png");
             @media(--small-only) {
                 background-position-y: 30%;
             }
@@ -184,10 +187,8 @@ nav {
 }
 
 section {
-    padding: 4rem 0;
-
     h1, h2, h3, h4 {
-        color: $text_green;
+        color: $green;
         font-weight: 600;
     }
 
@@ -203,16 +204,58 @@ section {
         width: 100%;
         margin-bottom: 15px;
         background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
 
         .text {
-            position: absolute;
-            text-align: center;
-            top: 45%;
-            left: 40%;
+            text-align: right;
+            flex-basis: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    .table {
+        display: table;
+        border-collapse:separate;
+        border-spacing: 0 1px;
+
+        .caption {
+            display: table-row;
+            background: #ececec;
+
+           .cell {
+               font-size: 14px;
+               font-weight: 600;
+               color: $green;
+               text-transform: uppercase;
+           }
+        }
+
+        .row {
+            display: table-row;
+            background: #f8f4f5;
+        }
+
+        .cell {
+            font-size: 16px;
+            width: 25%;
+            display: table-cell;
+            text-align: left;
+            padding: 15px 5px 15px 15px;
         }
     }
 
     &.sales-section {
+        .banner {
+            background-image: url("../img/service/sales-big.png");
+        }
+
         .items {
             position: relative;
             padding: 15px 0;
@@ -221,11 +264,32 @@ section {
                 position: static;
 
                 a {
+                    position: relative;
                     display: block;
                     margin-bottom: 50px;
                     text-decoration: none;
                     text-align: center;
                     font-weight: 600;
+
+                    .deal {
+                        position: absolute;
+                        display: block;
+                        width: 89px;
+                        height: 89px;
+                        background: $green;
+                        border: .5px solid $green;
+                        border-radius: 50%;
+                        right: 15px;
+
+                        &__price {
+                            position: absolute;
+                            top: 31px;
+                            left: 7px;
+                            transform: rotate(-17deg);
+                            color: #fff;
+                            font-size: 1.3rem;
+                        }
+                    }
 
                     img.shower {
                         margin-top: -50px;
@@ -233,13 +297,13 @@ section {
 
                     h3 {
                         font-weight: 600;
-                        color: $text_green;
+                        color: $green;
                     }
 
                     .price {
                         display: block;
                         font-size: 24px;
-                        color: $text_brown;
+                        color: $brown;
                     }
                 }
 
@@ -266,7 +330,7 @@ section {
                         box-shadow: 0 1px 8px 0 rgba(0,0,0,.06), 0 2px 2px 0 rgba(0,0,0,.12);
 
                         .cost {
-                            color: $text_brown;
+                            color: $brown;
                         }
 
                         .btn {
@@ -275,7 +339,7 @@ section {
                         }
 
                         .special-offer {
-                            color: $text_brown;
+                            color: $brown;
                         }
                     }
 
@@ -296,31 +360,31 @@ section {
 
     &.service-section {
         ul { margin-left: 25px; }
-        .service-block {
-          .banner {
-            background: url("../img/service/service-big.jpg");
-          }
-        }
-        .sanitation-block {
-          .banner {
-            background: url("../img/service/sanitation-big.jpg");
-          }
 
-          .text {
-            top: 35%;
-          }
+        .service-block {
+            .banner {
+                background-image: url("../img/service/service-big.png");
+            }
+        }
+
+        .delivery-block {
+            .banner {
+                background-image: url("../img/service/delivery-big.png");
+            }
         }
     }
 
     &.rent-section {
         .banner {
-            background: url("../img/service/rent-big.jpg");
-            .text {
-                top: 35%;
-                left: 42%;
-            }
-
+            background-image: url("../img/service/rent-big.png");
         }
+    }
+}
+
+footer {
+    .info {
+        h1, h2, h3, h4 { color: inherit; }
+        background: #f7f7f7;
     }
 }
 

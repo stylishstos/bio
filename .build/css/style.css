@@ -203,11 +203,6 @@
     to { opacity: 1 !important; }
 }
 
-::-moz-selection {
-    background: #83a938;
-    color: #fff;
-}
-
 ::selection {
     background: #83a938;
     color: #fff;
@@ -244,8 +239,12 @@
     background-color: #6c513e;
 }
 
+/* header, footer, section padding-top for nav*/
+.header, footer, section {
+  padding-top: 5rem;
+}
+
 .header {
-    padding-top: 4rem;
     height: 573px;
     position: relative;
 }
@@ -268,12 +267,13 @@
         display: flex;
         cursor: pointer;
         text-decoration: none;
+        background-color: rgba(0, 0, 0, .5);
         background-size: cover;
         background-repeat: no-repeat;
 }
 
 .header a.sales {
-    background-image: url("../img/header/sales.jpg");
+    background-image: url("../img/header/sales-header.png");
 }
 
 @media screen and (max-width: 47.9375em) {
@@ -284,7 +284,7 @@
 }
 
 .header a.rent {
-    background-image: url("../img/header/rent.jpg");
+    background-image: url("../img/header/rent-header.png");
 }
 
 @media screen and (max-width: 47.9375em) {
@@ -295,7 +295,7 @@
 }
 
 .header a.service {
-    background-image: url("../img/header/service.jpg");
+    background-image: url("../img/header/service-header.png");
 }
 
 @media screen and (max-width: 47.9375em) {
@@ -397,10 +397,6 @@ nav a:hover {
             background-image: url("../img/icon-close-white.svg");
         }
 
-section {
-    padding: 4rem 0;
-}
-
 section h1, section h2, section h3, section h4 {
         color: #83a938;
         font-weight: 600;
@@ -418,14 +414,64 @@ section .banner {
         width: 100%;
         margin-bottom: 15px;
         background-repeat: no-repeat;
+        background-size: cover;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+                align-items: flex-end;
     }
 
 section .banner .text {
-            position: absolute;
-            text-align: center;
-            top: 45%;
-            left: 40%;
+            text-align: right;
+            -webkit-flex-basis: 100%;
+                -ms-flex-preferred-size: 100%;
+                    flex-basis: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
         }
+
+section .banner h1 {
+            font-size: 4rem;
+        }
+
+section .table {
+        display: table;
+        border-collapse:separate;
+        border-spacing: 0 1px;
+    }
+
+section .table .caption {
+            display: table-row;
+            background: #ececec;
+        }
+
+section .table .caption .cell {
+               font-size: 14px;
+               font-weight: 600;
+               color: #83a938;
+               text-transform: uppercase;
+           }
+
+section .table .row {
+            display: table-row;
+            background: #f8f4f5;
+        }
+
+section .table .cell {
+            font-size: 16px;
+            width: 25%;
+            display: table-cell;
+            text-align: left;
+            padding: 15px 5px 15px 15px;
+        }
+
+section.sales-section .banner {
+            background-image: url("../img/service/sales-big.png");
+}
 
 section.sales-section .items {
             position: relative;
@@ -437,12 +483,34 @@ section.sales-section .items .item {
             }
 
 section.sales-section .items .item a {
+                    position: relative;
                     display: block;
                     margin-bottom: 50px;
                     text-decoration: none;
                     text-align: center;
                     font-weight: 600;
                 }
+
+section.sales-section .items .item a .deal {
+                        position: absolute;
+                        display: block;
+                        width: 89px;
+                        height: 89px;
+                        background: #83a938;
+                        border: .5px solid #83a938;
+                        border-radius: 50%;
+                        right: 15px;
+                    }
+
+section.sales-section .items .item a .deal__price {
+                            position: absolute;
+                            top: 31px;
+                            left: 7px;
+                            -webkit-transform: rotate(-17deg);
+                                    transform: rotate(-17deg);
+                            color: #fff;
+                            font-size: 1.3rem;
+                        }
 
 section.sales-section .items .item a img.shower {
                         margin-top: -50px;
@@ -512,25 +580,22 @@ section.service-section ul { margin-left: 25px;
 }
 
 section.service-section .service-block .banner {
-            background: url("../img/service/service-big.jpg");
-          }
+                background-image: url("../img/service/service-big.png");
+            }
 
-section.service-section .sanitation-block .banner {
-            background: url("../img/service/sanitation-big.jpg");
-          }
-
-section.service-section .sanitation-block .text {
-            top: 35%;
-          }
+section.service-section .delivery-block .banner {
+                background-image: url("../img/service/delivery-big.png");
+            }
 
 section.rent-section .banner {
-            background: url("../img/service/rent-big.jpg");
+            background-image: url("../img/service/rent-big.png");
 }
 
-section.rent-section .banner .text {
-                top: 35%;
-                left: 42%;
-            }
+footer .info {
+        background: #f7f7f7;
+    }
+
+footer .info h1, footer .info h2, footer .info h3, footer .info h4 { color: inherit; }
 
 .mail-to-us {
     position: fixed;
